@@ -17,7 +17,7 @@ const DashboardPage = () => {
           Aurora AI is a platform that allows you to generate images, videos, and code using the power of AI.
         </p>
       </div>
-      <div className="px-4 md:px-20 lg:px-32 space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-10">
         <ToolItems modal={false} />
       </div>
     </div>
