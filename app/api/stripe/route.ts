@@ -48,7 +48,7 @@ export async function GET() {
           price_data: {
             currency: "USD",
             product_data: {
-              name: "Lumina AI Pro",
+              name: "Aurora AI Pro",
               description: "Unlimited AI Generations",
             },
             unit_amount: 2000,

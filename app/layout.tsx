@@ -12,7 +12,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lumina AI",
+  title: "Aurora AI",
   description: "AI Platform",
 };
 
