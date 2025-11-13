@@ -13,7 +13,6 @@ Features:
 - Image Generation Tool (Open AI)
 - Video Generation Tool (Replicate AI)
 - Conversation Generation Tool (Open AI)
-- Music Generation Tool (Replicate AI)
 - Page loading state
 - Stripe monthly subscription
 - Free tier with API limiting

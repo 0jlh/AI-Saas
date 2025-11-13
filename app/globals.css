@@ -63,7 +63,7 @@ body,
     --tracking-normal: 0em;
     --spacing: 0.25rem;
   }
-
+  
   .dark {
     --background: 250.9091 18.6441% 11.5686%;
     --foreground: 250.0000 36.0000% 90.1961%;

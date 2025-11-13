@@ -1,11 +1,10 @@
 import {
-  Video,
   Code,
   ImageIcon,
   LayoutDashboard,
   MessageSquare,
-  Music,
   Settings,
+  Video,
   VideoIcon,
 } from "lucide-react";
 
@@ -32,13 +31,6 @@ export const tools = [
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
     href: "/video",
-  },
-  {
-    label: "Music Generation",
-    icon: Music,
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-    href: "/music",
   },
   {
     label: "Code Generation",
@@ -73,12 +65,6 @@ export const routes = [
     icon: VideoIcon,
     color: "text-orange-700",
     href: "/video",
-  },
-  {
-    label: "Music Generation",
-    icon: Music,
-    color: "text-emerald-500",
-    href: "/music",
   },
   {
     label: "Code Generation",
