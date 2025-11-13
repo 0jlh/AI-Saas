@@ -14,7 +14,7 @@ const DashboardPage = () => {
           Explore the power of AI
         </h2>
         <p className="text-center pb-10 text-muted-foreground text-sm md:text-lg">
-          QuantaGen is a platform that allows you to generate images, videos,
+          Lumina AI is a platform that allows you to generate images, videos,
           music, and code using the power of AI.
         </p>
       </div>

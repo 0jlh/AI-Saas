@@ -38,12 +38,17 @@ export async function GET() {
       mode: "subscription",
       billing_address_collection: "auto",
       customer_email: user.emailAddresses[0].emailAddress,
+      subscription_data: {
+        metadata: {
+          userId,
+        },
+      },
       line_items: [
         {
           price_data: {
             currency: "USD",
             product_data: {
-              name: "QuantaGen Pro",
+              name: "Lumina AI Pro",
               description: "Unlimited AI Generations",
             },
             unit_amount: 2000,

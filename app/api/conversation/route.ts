@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
 
-import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
+import { checkApiLimit, incrementApiLimit } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
 
 const configuration = new Configuration({
@@ -37,15 +37,22 @@ export async function POST(req: Request) {
       );
 
     const response = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o",
       messages,
     });
 
     if (!isPro) await incrementApiLimit();
 
     return NextResponse.json(response.data.choices[0].message);
-  } catch (error) {
-    console.log("[CONVERSATION_ERROR]", error);
+  } catch (error: any) {
+    console.error("[CONVERSATION_ERROR]", error);
+
+    if (error.response?.status === 429) {
+      return new NextResponse("Too many requests. Please slow down.", {
+        status: 429,
+      });
+    }
+
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
